@@ -1,0 +1,54 @@
+.btn-transition{
+     transition: all linear 300ms;
+}
+
+.btn{
+    padding: 12px 5px;
+    font-size: 1rem;
+    font-weight: 700;
+    white-space: initial;
+    line-height: 1.6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-fw{
+    width: 100% !important;
+}
+
+.btn-lg{
+    padding: 12px 50px !important;
+}
+
+.btn-primary{
+    background: $primary;
+    border: solid 1px $primary;
+    color: white;
+    @extend .btn-transition;
+
+    &:hover{
+        background: darken($primary, 10);
+    }
+}
+
+.btn-primary-outlined{
+    @extend .btn-transition;
+    border: solid 1px $secondary;
+    color: $secondary;
+
+    &:hover{
+        background: rgba($color: $secondary, $alpha: 0.03);
+        border: solid 1px $secondary;
+    }
+
+}
+
+.btn-lg{
+    width: 100% !important;
+}
+
+.radius{
+    border-radius: $radius;
+}

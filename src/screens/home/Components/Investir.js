@@ -17,7 +17,8 @@ import invest2 from "./../../../asset/invest2.png"
 import CurrencyExchangeOutlinedIcon from '@mui/icons-material/CurrencyExchangeOutlined';
 import social from "./../../../asset/social.svg"
 import distribution from "./../../../asset/distribution.svg"
-
+import ScrollAnimation from 'react-animate-on-scroll';
+import "animate.css/animate.min.css";
 
 function Investir(){
 
@@ -47,6 +48,7 @@ function Invest() {
     const theme = useTheme();
 
     return (
+        <ScrollAnimation animateIn="animate__rotateInUpLeft" duration={1} delay={1}>
         <div className="invest2">
             <Grid container spacing={2} justifyContent="space-between" className="grid">
                 <Grid item xs={12} sm={4}>
@@ -63,6 +65,7 @@ function Invest() {
                 </Grid>
             </Grid>
         </div>
+        </ScrollAnimation>
     );
 }
 
@@ -70,6 +73,7 @@ function Invest2() {
     const theme = useTheme();
 
     return (
+        <ScrollAnimation animateIn="animate__rotateInDownRight" duration={1} delay={1}>
         <div className="invest2">
             <Grid container spacing={2} justifyContent="space-between" direction={"row-reverse"} className="grid">
                 <Grid item xs={12} sm={4}>
@@ -87,6 +91,7 @@ function Invest2() {
                 </Grid>
             </Grid>
         </div>
+        </ScrollAnimation>
     );
 }
 
@@ -94,6 +99,7 @@ function Invest3() {
     const theme = useTheme();
 
     return (
+        <ScrollAnimation animateIn="animate__bounceIn" duration={1} delay={2}>
         <div className="invest getStarted">
             <div>
                 <img src="https://guihon.cm//asset/media/etoile2.svg" alt="img" />
@@ -106,6 +112,7 @@ function Invest3() {
                 </div>
             </a>
         </div>
+        </ScrollAnimation>
     );
 }
 export default Investir

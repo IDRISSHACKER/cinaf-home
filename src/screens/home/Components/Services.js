@@ -18,7 +18,7 @@ function Services(){
     return (
         <div className="services section" id={"services"}>
             <div className="container">
-                <SectionTitle icon={<ShopTwoOutlinedIcon />} title={"Nos services"} subtitle={"Découvrez la large gamme de services offerts par CINAF"} />
+                <SectionTitle anim={false} icon={<ShopTwoOutlinedIcon />} title={"Nos services"} subtitle={"Découvrez la large gamme de services offerts par CINAF"} />
                 <div className="section-body">
                         <Splide style={{overflow: "hidden !important"}} aria-label="Services" options={{
                             rewind: true,

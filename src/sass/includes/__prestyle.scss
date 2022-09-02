@@ -6,9 +6,72 @@ html, body{
 .container{
     margin-left: 10px;
     margin-right: 10px;
+    overflow: hidden !important;
+}
+
+@media only screen and (min-width: 1000px){
+    .container{
+        max-width: 1300px;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 1400px){
+    .container{
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
+}
+
+
+@media only screen and (max-width: 600px){
+    .container{
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
 }
 
 a{
     text-decoration: none;
     color: #1d2424;
+}
+
+
+.divider{
+    width: 100px;
+    height: 4px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+    overflow: hidden;
+    background: rgba(#1D2424, 0.3);
+    margin-top: 20px;
+    border-radius: 4px;
+    position: relative;
+
+
+    &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        background-color: rgba($secondary, 1);
+        display: block;
+        height: 6px;
+        width: 10px;
+        animation: loadTitle 5s linear 0s infinite;
+    }
+}
+
+
+@keyframes loadTitle{
+    from{
+      left: 0;
+      opacity: 0;
+    }
+
+    to{
+        left: 100px;
+        opacity: 1;
+    }
 }

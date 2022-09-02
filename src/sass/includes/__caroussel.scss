@@ -1,0 +1,139 @@
+@keyframes zoomIn {
+    from{
+        transform: scale(1.5);
+    }
+
+    to{
+        transform: scale(2);
+    }
+}
+
+@media only screen and (min-width: 800px){
+    .caroussel{
+        max-height: 500px !important;
+
+        .caroussel-body{
+
+        }
+    }
+
+    .carousItem{
+        .carous{
+          .carousText{
+            padding-top: 110px !important;
+          }   
+        }
+    }
+}
+
+@media only screen and (min-width: 1300px){
+    .caroussel{
+        max-height: 700px !important;
+
+        .caroussel-body{
+
+        }
+    }
+
+    .carousItem{
+        .carous{
+          .carousText{
+            padding-top: 160px !important;
+          }   
+        }
+    }
+}
+
+@media only screen and (max-width: 500px){
+ .caroussel{
+    height: 375px !important;
+ }
+}
+
+.caroussel{
+    background: $secondary;
+    max-height: 275px;
+    overflow: hidden;
+
+    .caroussel-body{
+        height: 100%;
+        overflow: hidden;
+    }
+}
+
+.carousItem{
+    height: 100%;
+    width: 100%;
+    display: none;
+    .carous{
+        height: 100%;
+        position: relative;
+        .carousImg{
+            padding-top: 70px;
+            height: 100%;
+            z-index: 5;
+
+            img{
+                transform: scale(1.3);
+            }
+        }
+        .carousText{
+            padding-top: 30px;
+            z-index: 6;
+            position: absolute;
+            top: 72px;
+            padding-left: $mobilePadding;
+            padding-right: $mobilePadding;
+            width: 100%;
+            height: 100%;
+            background: rgba($color: $secondary, $alpha: 0.2);
+
+
+        }
+    }
+}
+
+.carousItemActive{
+    display: block;
+
+    .multi{
+    .textshow{
+
+        &:nth-child(1){
+            animation: showup  ease 4800ms;
+        }
+
+        &:nth-child(2){
+            animation: showup  ease 7600ms;
+        }
+
+        &:nth-child(3){
+            animation: showup  ease 9200ms;
+        }
+
+        
+        &:nth-child(4){
+            animation: showup  ease 10900ms;
+        }
+
+        
+        &:nth-child(6){
+            animation: showup  ease 12200ms;
+        }
+    }
+
+    &:nth-child(2){
+        margin-top: 13px;
+    }
+}
+
+    .carous{
+        .carousImg{
+            img{
+                animation: zoomIn  ease 24000ms !important;
+            }
+        }
+    }
+
+
+}

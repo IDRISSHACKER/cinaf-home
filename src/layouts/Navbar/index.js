@@ -10,18 +10,25 @@ import CurrencyExchangeOutlinedIcon from '@mui/icons-material/CurrencyExchangeOu
 import ShopOutlinedIcon from '@mui/icons-material/ShopOutlined';
 import DownloadingOutlinedIcon from '@mui/icons-material/DownloadingOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
+import Scroll from 'react-scroll-to-element';
 
 function Navbar() {
     const [active, setActive] = React.useState(false)
 
     const handleMenu = ()=>{
         setActive(!active)
+        console.log("menu")
     }
+
+    React.useEffect(()=>{
+        setTimeout(()=>{
+            console.log(window.location.href)
+        },100)
+    }, [])
 
     return (
         <div>
             <AppBar className="navbar">
-                <Container>
                     <div className="navbar-body">
                         <div className="navbar-brand">
                             <a href="#">
@@ -29,9 +36,15 @@ function Navbar() {
                             </a>
                         </div>
                         <div className="navbar-links hideMobile">
-                            <a href="#home" className="link">Acceuil</a>
-                            <a href="#services" className="link">Nos services</a>
-                            <a href="#investissement" className="link">Investir</a>
+                        <Scroll type="id" element="home">
+                            <button  className="link">Acceuil</button>
+                        </Scroll>
+                        <Scroll type="id" element="services">
+                            <button className="link">Nos services</button>
+                        </Scroll>
+                        <Scroll type="id" element="investissement">
+                            <button className="link">Investir</button>
+                        </Scroll>
                         </div>
                         <div className="navbar-footer hideMobile">
                             <a href="https://apps.cinaf.tv/download" className="btn btn-lg btn-primary-outlined btn-navbar radius">
@@ -40,10 +53,10 @@ function Navbar() {
                                     <AccountCircleOutlinedIcon />
                                 </div>
                             </a>
-                            <a href="https://apps.cinaf.tv/download" className="btn btn-primary btn-lg btn-navbar radius">
-                                <div className="btn-text">Telecharger</div>
+                            <a href="#" className="btn btn-primary btn-lg btn-navbar radius">
+                                <div className="btn-text">Investir</div>
                                 <div className="btn-icon">
-                                    <DownloadingOutlinedIcon />
+                                    <CurrencyExchangeOutlinedIcon />
                                 </div>
                             </a>
                         </div>
@@ -59,7 +72,6 @@ function Navbar() {
                             </div>
                         </motion.div>
                     </div>
-                </Container>
             </AppBar>
             <div className={`menu-area ${active ? "menu-active" : null}`}>
                 <motion.div
@@ -76,7 +88,7 @@ function Navbar() {
                            </div>
                         </div>
                         <div className="menuItems">
-                            <a href="#" className="menuItem">
+                            <a href="#home" className="menuItem" onClick={handleMenu}>
                                 <div>
                                     <div className="menuItemIcon">
                                         <HomeOutlinedIcon />
@@ -86,20 +98,20 @@ function Navbar() {
                                     </div>
                                 </div>
                             </a>
-                            <a href="#" className="menuItem">
+                                <a href="#services" className="menuItem" onClick={handleMenu}>
                                 <div>
                                     <div className="menuItemIcon">
-                                        <CurrencyExchangeOutlinedIcon />
+                                        <ShopOutlinedIcon />
                                     </div>
                                     <div className="menuItemTex">
                                         <span>Nos services</span>
                                     </div>
                                 </div>
                             </a>
-                            <a href="#" className="menuItem">
+                                <a href="#investissement" className="menuItem" onClick={handleMenu}>
                                 <div>
                                     <div className="menuItemIcon">
-                                        <ShopOutlinedIcon />
+                                        <CurrencyExchangeOutlinedIcon />
                                     </div>
                                     <div className="menuItemTex">
                                         <span>Investir</span>
@@ -109,10 +121,10 @@ function Navbar() {
                         </div>
                     </div>
                     <div className="menuFooter">
-                        <a href="https://apps.cinaf.tv/download" className="btn btn-primary btn-fw">
-                            <div className="btn-text">Telecharger</div>
+                        <a href="#" className="btn btn-primary btn-fw">
+                            <div className="btn-text">Investir</div>
                             <div className="btn-icon">
-                                <DownloadingOutlinedIcon />
+                                <CurrencyExchangeOutlinedIcon />
                             </div>
                         </a>
                         <a href="https://cinaf.tv/fr/" className="btn btn-fw">S'abonner à cinaf</a>

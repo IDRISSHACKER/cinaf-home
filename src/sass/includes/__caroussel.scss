@@ -98,7 +98,7 @@
 
     .multi{
     .textshow{
-
+        /**
         &:nth-child(1){
             animation: showup  ease 4800ms;
         }
@@ -120,6 +120,7 @@
         &:nth-child(6){
             animation: showup  ease 12200ms;
         }
+        **/
     }
 
     &:nth-child(2){
@@ -127,13 +128,13 @@
     }
 }
 
-    .carous{
+    /*.carous{
         .carousImg{
             img{
                 animation: zoomIn  ease 24000ms !important;
             }
         }
-    }
+    }*/
 
 
 }

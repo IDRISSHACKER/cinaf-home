@@ -2,6 +2,8 @@ import React from "react"
 import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
 import caroussel1 from "./../../../asset/caroussel1.jpg"
 import caroussel2 from "./../../../asset/caroussel2.jpg"
+import Slider from 'react-animated-slider';
+import horizontalCss from 'react-animated-slider/build/horizontal.css';
 
 function Caroussel(){
     const delay = 42000;
@@ -12,13 +14,37 @@ function Caroussel(){
         active === 3 ? setActive(1) : setActive(active + 1)
     },delay)
 
+    const sliderItems = [
+        {
+            title: "Roi du streaming",
+            title2: "cameounais",
+            img: caroussel1,
+            link: "#",
+            btnText: "A propos"
+        },
+        {
+            title: "Une équipe",
+            title2: "dynamique",
+            img: caroussel2,
+            link: "#",
+            btnText: "Nos services"
+        },
+        {
+            title: "Devenir partenaire",
+            title2: "Cinaf",
+            img: caroussel1,
+            link: "#",
+            btnText: "Nos services"
+        }
+    ]
+
 
     return (
         <div className="caroussel">
             <div className="carousselBody">
-                <Carous isActive={active === 1 && true} title1={"Roi du streaming"} title2={"cameounais"} img={caroussel1} link="#" btnText={"A propos"} />
-                <Carous isActive={active === 2 && true} title1={"Une équipe"} title2={"dynamique"} img={caroussel2} link="#" btnText={"Nos services"} />
-                <Carous isActive={active === 3 && true} title1={"Devenir partenaire"} title2={"cinaf"} img={caroussel1} link="#" btnText={"Nos services"} />
+                    {sliderItems.map((item, index) => (
+                        <Carous key={`${index}`} isActive={active === 1 && true} title1={item.title} title2={item.title2} img={item.img} link={item.link} btnText={item.btnText} />
+                    ))}
             </div>
         </div>
     )

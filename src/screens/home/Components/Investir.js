@@ -48,24 +48,28 @@ function Invest() {
     const theme = useTheme();
 
     return (
-        <ScrollAnimation animateIn="animate__rotateInUpLeft" duration={1} delay={1}>
         <div className="invest2">
             <Grid container spacing={2} justifyContent="space-between" className="grid">
                 <Grid item xs={12} sm={4}>
-                    <Typography component="div" variant="h3" className="adapt">
-                        UNE NOTORIÉTÉ DANS LES RÉSEAUX SOCIAUX
-                    </Typography>
+                    <ScrollAnimation animateIn="animate__fadeInUp" duration={1} delay={1}>
+                        <Typography component="div" variant="h3" className="adapt">
+                            UNE NOTORIÉTÉ DANS LES RÉSEAUX SOCIAUX
+                        </Typography>
+                    </ScrollAnimation>
                     <br /><br />
-                    <Typography variant="subtitle1" color="text.secondary" component="div">
-                        Alors que nous sommes dans un contexte où le digital en général et les réseaux sociaux en particulier constituent un élément fondamental, nous nous sommes forgés une réputation solide, ce qui nous vaut d'être la plateforme officielle du cinéma Camerounais avec plus de 500.000 followers sur l'ensemble de nos réseaux sociaux.
-                    </Typography>
+                    <ScrollAnimation animateIn="animate__fadeInUp" duration={1} delay={1}>
+                        <Typography variant="subtitle1" color="text.secondary" component="div">
+                            Alors que nous sommes dans un contexte où le digital en général et les réseaux sociaux en particulier constituent un élément fondamental, nous nous sommes forgés une réputation solide, ce qui nous vaut d'être la plateforme officielle du cinéma Camerounais avec plus de 500.000 followers sur l'ensemble de nos réseaux sociaux.
+                        </Typography>
+                    </ScrollAnimation>
                 </Grid>
                 <Grid item xs={12} sm={5}>
-                    <img src={social} alt="social img" className="invest-img"/>
+                    <ScrollAnimation animateIn="animate__rotateInUpLeft" duration={1} delay={1}>
+                        <img src={social} alt="social img" className="invest-img"/>
+                    </ScrollAnimation>
                 </Grid>
             </Grid>
         </div>
-        </ScrollAnimation>
     );
 }
 
@@ -73,25 +77,29 @@ function Invest2() {
     const theme = useTheme();
 
     return (
-        <ScrollAnimation animateIn="animate__rotateInDownRight" duration={1} delay={1}>
         <div className="invest2">
             <Grid container spacing={2} justifyContent="space-between" direction={"row-reverse"} className="grid">
                 <Grid item xs={12} sm={4}>
-                    <Typography component="div" variant="h3" className="adapt">
-                        UN SERVICE DE DISTRIBUTION
-                    </Typography>
+                    <ScrollAnimation animateIn="animate__fadeInRightBig" duration={1} delay={1}>
+                        <Typography component="div" variant="h3" className="adapt">
+                            UN SERVICE DE DISTRIBUTION
+                        </Typography>
+                    </ScrollAnimation>
                     <br />
                     <br />
-                    <Typography variant="subtitle1" color="text.secondary" component="div">
-                        Conscient de la difficulté que rencontre les réalisateurs cinématographiques camerounais, de nos jours, nous nous engageons via ce service à proposer des solutions fiables et concrètes au problème de la distribution.
-                    </Typography>
+                    <ScrollAnimation animateIn="animate__fadeInLeftBig" duration={1} delay={1}>
+                        <Typography variant="subtitle1" color="text.secondary" component="div">
+                            Conscient de la difficulté que rencontre les réalisateurs cinématographiques camerounais, de nos jours, nous nous engageons via ce service à proposer des solutions fiables et concrètes au problème de la distribution.
+                        </Typography>
+                    </ScrollAnimation>
                 </Grid>
                 <Grid item xs={12} sm={5}>
-                    <img src={distribution} alt="social img" className="invest-img" />
+                    <ScrollAnimation animateIn="animate__bounceInDown" duration={1} delay={1}>
+                        <img src={distribution} alt="social img" className="invest-img" />
+                    </ScrollAnimation>
                 </Grid>
             </Grid>
         </div>
-        </ScrollAnimation>
     );
 }
 

@@ -11,6 +11,7 @@ import ShopOutlinedIcon from '@mui/icons-material/ShopOutlined';
 import DownloadingOutlinedIcon from '@mui/icons-material/DownloadingOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import Scroll from 'react-scroll-to-element';
+import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 
 function Navbar() {
     const [active, setActive] = React.useState(false)
@@ -28,7 +29,7 @@ function Navbar() {
 
     return (
         <div>
-            <AppBar className="navbar">
+            <div className="navbar">
                     <div className="navbar-body">
                         <div className="navbar-brand">
                             <a href="#">
@@ -47,12 +48,12 @@ function Navbar() {
                         </Scroll>
                         </div>
                         <div className="navbar-footer hideMobile">
-                            <a href="https://apps.cinaf.tv/download" className="btn btn-lg btn-primary-outlined btn-navbar radius">
+                            {/*<a href="https://apps.cinaf.tv/download" className="btn btn-lg btn-primary-outlined btn-navbar radius">
                                 <div className="btn-text">s'abonner</div>
                                 <div className="btn-icon">
                                     <AccountCircleOutlinedIcon />
                                 </div>
-                            </a>
+                             </a>*/}
                             <a href="#" className="btn btn-primary btn-lg btn-navbar radius">
                                 <div className="btn-text">Investir</div>
                                 <div className="btn-icon">
@@ -66,13 +67,13 @@ function Navbar() {
                         transition={{ delay: 0.6, type: "spring" }}
                         className="navbar-menu showMobile">
                             <div className="active-menu">
-                                <IconButton color="primary" aria-label="close menu" onClick={handleMenu}>
-                                    <img src={menu} alt="active menu" className="menuIcon" />
+                                <IconButton color={"inherit"} aria-label="close menu" onClick={handleMenu}>
+                                    <MenuOutlinedIcon style={{color:"white"}} />
                                 </IconButton>
                             </div>
                         </motion.div>
                     </div>
-            </AppBar>
+            </div>
             <div className={`menu-area ${active ? "menu-active" : null}`}>
                 <motion.div
                 className="menu">

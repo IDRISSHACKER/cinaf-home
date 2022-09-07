@@ -8,6 +8,8 @@ import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import vod1 from "./../../../asset/vod.webp"
+import vod2 from "./../../../asset/vod2.webp"
+import dev from "./../../../asset/dev.jpg"
 import ShopTwoOutlinedIcon from '@mui/icons-material/ShopTwoOutlined';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
@@ -20,39 +22,39 @@ function Services(){
             <div className="container">
                 <SectionTitle anim={false} icon={<ShopTwoOutlinedIcon />} title={"Nos services"} subtitle={"Découvrez la large gamme de services offerts par CINAF"} />
                 <div className="section-body">
-                        <Splide style={{overflow: "hidden !important"}} aria-label="Services" options={{
-                            rewind: true,
-                            autoplay: true,
-                            perPage: 3,
-                            perMove: 3,
-                            gap: 15,
-                            pagination: false,
-                            breakpoints: {
-                                623: {
-                                    perPage: 1,
-                                    perMove: 1
-                                },
-                                935: {
-                                    perPage: 2,
-                                    perMove: 2
-                                },
-                                1247: {
-                                    perPage: 3,
-                                    perMove: 3
-                                }
+                    <Splide style={{ overflow: "hidden !important" }} aria-label="Services" options={{
+                        rewind: true,
+                        autoplay: true,
+                        perPage: 3,
+                        perMove: 3,
+                        gap: 15,
+                        pagination: false,
+                        breakpoints: {
+                            623: {
+                                perPage: 1,
+                                perMove: 1
+                            },
+                            935: {
+                                perPage: 2,
+                                perMove: 2
+                            },
+                            1247: {
+                                perPage: 3,
+                                perMove: 3
                             }
-                        }}>
+                        }
+                    }}>
                                 <SplideSlide>
-                                    <Service img={vod1} title={"Vidéo à la démande"} desk={"Conscient de la difficulté que rencontre les réalisateurs cinématographiques camerounais, de nos jours, nous..."} />
+                                    <Service img={vod2} title={"Vidéo à la démande"} desk={"Conscient de la difficulté que rencontre les réalisateurs cinématographiques camerounais, de nos jours, nous..."} />
                                 </SplideSlide>
                                 <SplideSlide>
-                                    <Service img={vod1} title={"Vidéo à la démande"} desk={"Conscient de la difficulté que rencontre les réalisateurs cinématographiques camerounais, de nos jours, nous..."} />
+                                    <Service img={vod2} title={"Vidéo à la démande"} desk={"Conscient de la difficulté que rencontre les réalisateurs cinématographiques camerounais, de nos jours, nous..."} />
                                 </SplideSlide>
                                 <SplideSlide>
-                                    <Service img={vod1} title={"Vidéo à la démande"} desk={"Conscient de la difficulté que rencontre les réalisateurs cinématographiques camerounais, de nos jours, nous..."} />
+                                    <Service img={vod2} title={"Vidéo à la démande"} desk={"Conscient de la difficulté que rencontre les réalisateurs cinématographiques camerounais, de nos jours, nous..."} />
                                 </SplideSlide>
                                 <SplideSlide>
-                                    <Service img={vod1} title={"Vidéo à la démande"} desk={"Conscient de la difficulté que rencontre les réalisateurs cinématographiques camerounais, de nos jours, nous..."} />
+                                    <Service img={vod2} title={"Vidéo à la démande"} desk={"Conscient de la difficulté que rencontre les réalisateurs cinématographiques camerounais, de nos jours, nous..."} />
                                 </SplideSlide>
                             </Splide>
                 </div>
@@ -63,14 +65,9 @@ function Services(){
 
 function Service({img, title, desk, link}) {
     return (
-        <motion.div whileHover={{ scale: 0.97}}>
+        <motion.div whileHover={{ scale: 0.90 }} initial={{scale: 0.95}}>
             <Card sx={{ maxWidth: 395 }} className={"selectedCard"}>
-                <CardMedia
-                    component="img"
-                    alt="image"
-                    height="140"
-                    image={img}
-                />
+                <img src={img} className="imgCrop" alt="apercu" />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
                         {title}

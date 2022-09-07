@@ -63,14 +63,9 @@ function Realisations() {
 
 function Service({ img, title, desk, link }) {
     return (
-        <motion.div whileHover={{ scale: 0.97 }}>
+        <motion.div whileHover={{ scale: 0.90 }} initial={{ scale: 0.95 }}>
             <Card sx={{ maxWidth: 395 }} className={"selectedCard"}>
-                <CardMedia
-                    component="img"
-                    alt="image"
-                    height="140"
-                    image={img}
-                />
+                <img src={img} className="imgCrop" alt="apercu" />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
                         {title}

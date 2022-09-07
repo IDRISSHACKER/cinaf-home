@@ -75,3 +75,18 @@ a{
         opacity: 1;
     }
 }
+
+.imgCrop{
+    height: 240px !important;
+    width: auto !important;
+    border-radius: 10px !important;
+    margin-top: 10px;
+}
+
+.selectedCard{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+

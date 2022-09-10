@@ -10,23 +10,11 @@ function Caroussel(){
     const delay = 9000;
     const [active, setActive] = React.useState(1)
 
-    const timer = setInterval(()=>{
-        active === 3 ? setActive(1) : setActive(active + 1)
-        return clearInterval(timer)
-    }, delay)
-
     const sliderItems = [
         {
             title: "Roi du streaming",
             title2: "cameounais",
             img: caroussel3,
-            link: "#",
-            btnText: "Investir"
-        },
-        {
-            title: "Une équipe",
-            title2: "dynamique",
-            img: caroussel2,
             link: "#",
             btnText: "Investir"
         },
@@ -38,6 +26,12 @@ function Caroussel(){
             btnText: "Investir"
         }
     ]
+
+    const timer = setInterval(()=>{
+        active === sliderItems.length ? setActive(1) : setActive(active + 1)
+        return clearInterval(timer)
+    }, delay)
+
 
 
     return (

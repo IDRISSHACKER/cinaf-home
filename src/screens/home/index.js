@@ -5,6 +5,7 @@ import Services from "./Components/Services";
 import Realisaion from "./Components/Realisaion";
 import Investir from "./Components/Investir";
 import Footer from "../../layouts/Footer";
+import Video from "./Components/Video";
 
 function Home(){
 
@@ -13,6 +14,7 @@ function Home(){
         <div>
             <Navbar />
             <Caroussel />
+            <Video />
             <Services />
             <Realisaion />
             <Investir />

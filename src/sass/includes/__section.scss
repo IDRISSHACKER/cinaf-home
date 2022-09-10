@@ -1,0 +1,63 @@
+.section{
+    padding-top: 80px;
+    background: url("https://tagusdrone.com/views/asset/img/bg/bg-9.jpg") no-repeat;
+    background-size: cover;
+    background-position: top;
+    padding-bottom: 80px;
+    background: #f7fafb;
+}
+
+.section1{
+    padding-top: 80px;
+    background: url("https://tagusdrone.com/views/asset/img/bg/bg-9.jpg") no-repeat;
+    background-size: cover;
+    background-position: top;
+    padding-bottom: 80px;
+    background: #ffffff;
+}
+
+.section2{
+    padding-top: 80px;
+    padding-bottom: 10px;
+    background: #f7fafb;
+    padding-bottom: 80px;
+}
+
+.section3{
+    padding-top: 80px;
+    padding-bottom: 10px;
+    background: #ffffff;
+    padding-bottom: 120px;
+}
+
+.section-body{
+    margin-top: 80px;
+}
+
+.invest-img{
+    max-width: 500px;
+}
+
+.getStarted{
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    a{
+        margin-top: 50px;
+    }
+
+    h3{
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #1D2424;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .invest2{
+        flex-direction: column-reverse !important;
+    }
+}

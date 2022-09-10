@@ -1,0 +1,21 @@
+.sectionTitle{
+    .titleTxt{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        .titileIcon{
+            *{
+                font-size: 40px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .sectionTitle{
+    .titleTxt{
+        gap: 10px;
+    }
+}
+}

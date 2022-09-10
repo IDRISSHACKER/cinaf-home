@@ -1,0 +1,86 @@
+html, body{
+    background: #f7fafb;
+    font-family: 'Montserrat', sans-serif;;
+}
+
+.container{
+    overflow: hidden !important;
+    max-width: 1200px;
+    margin: auto;
+}
+
+@media only screen and (max-width: 1200px){
+    .container{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .container{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+
+
+a{
+    text-decoration: none;
+    color: #1d2424;
+}
+
+
+.divider{
+    width: 100px;
+    height: 4px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+    overflow: hidden;
+    background: rgba(#1D2424, 0.3);
+    margin-top: 20px;
+    border-radius: 4px;
+    position: relative;
+
+
+    &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        background-color: rgba($secondary, 1);
+        display: block;
+        height: 6px;
+        width: 10px;
+        animation: loadTitle 5s linear 0s infinite;
+    }
+}
+
+
+@keyframes loadTitle{
+    from{
+      left: 0;
+      opacity: 0;
+    }
+
+    to{
+        left: 100px;
+        opacity: 1;
+    }
+}
+
+.imgCrop{
+    height: 240px !important;
+    width: auto !important;
+    border-radius: 10px !important;
+    margin-top: 10px;
+}
+
+.selectedCard{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+

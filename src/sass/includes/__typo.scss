@@ -1,0 +1,70 @@
+
+.white{
+    color: white
+}
+
+.title2{
+    font-weight: 800;
+    color: rgb(255, 255, 255);
+    letter-spacing: -0.812842px;
+    font-size: 27.0947px;
+}
+
+@media only screen and (min-width: 800px){
+ .title2{
+    font-size: 54px;
+ }
+}
+
+@media only screen and (min-width: 1300px){
+ .title2{
+    font-size: 85px;
+ }
+}
+
+
+.multi{
+    .textshow{
+        margin-right: 10px;
+        color: white;
+        text-shadow: 1px 1px 10px rgba(#000, 0.2)
+    }
+
+    &:nth-child(2){
+        margin-top: 13px;
+    }
+}
+
+.title3{
+    font-size: 32px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.subTitleTxt{
+    padding-top: 0px;
+    .titileIcon{
+        
+    }
+    p{
+        margin: 0 0 15px 0;
+        color: #1d2424;
+        line-height: 1.7;
+        font-size: 14px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 500px){
+.adapt{
+    font-size: 27px !important;
+    word-wrap: break-word;
+}
+}
+
+@media only screen and (max-width: 1150px){
+.adapt{
+    font-size: 32px !important;
+    word-wrap: break-word;
+}
+}

@@ -1,0 +1,87 @@
+.btn-transition{
+     transition: all linear 300ms;
+}
+
+.btn{
+    padding: 10px 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    white-space: initial;
+    line-height: 1.3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    user-select: none;
+}
+
+.btn-fw{
+    width: 100% !important;
+}
+
+.btn-lg{
+    padding: 5px 50px !important;
+}
+
+.btn-primary{
+    background: $primary;
+    border: solid 1px $primary;
+    color: white;
+    @extend .btn-transition;
+
+    &:hover{
+        background: darken($primary, 10);
+    }
+}
+
+.btn-primary-outlined{
+    @extend .btn-transition;
+    border: solid 1px #fff;
+    color: #fff;
+
+    &:hover{
+        background: rgba($color: $secondary, $alpha: 0.03);
+        border: solid 1px $secondary;
+    }
+
+}
+
+.btn-lg{
+    width: 100% !important;
+}
+
+.radius{
+    border-radius: $radius;
+}
+
+.btn-caroussel{
+    margin-top: 15px;
+    width: 120px !important;
+    font-size: 10px;
+    font-weight: 500;
+
+    .icon{
+        *{
+            font-size: 10px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px){
+.btn-caroussel{
+    margin-top: 15px;
+    width: 160px !important;
+    font-size: 14px;
+    font-weight: 500;
+
+    .icon{
+        *{
+            font-size: 14px;
+        }
+    }
+}
+}
+
+.btn-llg{
+    width: 300px;
+}

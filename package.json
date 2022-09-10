@@ -23,6 +23,7 @@
     "react-scripts": "5.0.1",
     "react-scroll-to-element": "^0.2.0",
     "react-scroll-to-top": "^3.0.0",
+    "react-youtube": "^9.0.3",
     "sass": "^1.54.7",
     "scss-reset": "^1.2.2",
     "web-vitals": "^2.1.4"

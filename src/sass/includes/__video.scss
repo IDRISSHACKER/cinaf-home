@@ -103,6 +103,13 @@
                     }
                 }
             }
+
+            position: relative;
+
+            .video-frame-youtube{
+                width: 100%;
+                height: auto;
+            }
         }
     }
 }
@@ -143,4 +150,21 @@
         }
     }
     
+}
+
+
+.video-play{
+
+        .video-frame{
+
+            .video-content{
+                .video-frame-content{
+                    
+                    display: none;
+
+                }
+            }
+
+        }
+
 }

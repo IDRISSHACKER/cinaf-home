@@ -96,7 +96,7 @@
 @keyframes showup {
     from{
         opacity: 0;
-        transform: translateY(200px);
+        transform: translateY(80px);
     }
 
     to{
@@ -134,25 +134,25 @@
     .textshow{
         display: block;
         &:nth-child(1){
-            animation: showup  ease 4800ms;
+            animation: showup  ease 2200ms;
         }
 
         &:nth-child(2){
-            animation: showup  ease 7600ms;
+            animation: showup  ease 4600ms;
         }
 
         &:nth-child(3){
-            animation: showup  ease 9200ms;
+            animation: showup  ease 5200ms;
         }
 
         
         &:nth-child(4){
-            animation: showup  ease 10900ms;
+            animation: showup  ease 6200ms;
         }
 
         
         &:nth-child(6){
-            animation: showup  ease 12200ms;
+            animation: showup  ease 8200ms;
         }
     }
 

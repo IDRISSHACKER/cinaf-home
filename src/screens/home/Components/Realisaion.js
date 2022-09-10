@@ -16,7 +16,7 @@ import { motion } from "framer-motion"
 
 function Realisations() {
     return (
-        <div className="services section">
+        <div className="services section1">
             <div className="container">
                 <SectionTitle icon={<InboxOutlinedIcon />} title={"Nos Realisation"} subtitle={"Explorer nos différents projets "} />
                 <div className="section-body">

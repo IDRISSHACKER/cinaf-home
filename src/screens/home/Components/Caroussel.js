@@ -65,7 +65,7 @@ function Carous({img, title1, title2, link, btnText, isActive=false}){
                 </div>
                 <div className="carousText">
                     <div className="container">
-                        <div className="cinaf white">CINAF</div>
+                        <div className="cinaf white hm">CINAF</div>
                         <div className="title2 white multi flextTxt">{ctitles1}</div>
                         <div className="title2 white multi flextTxt">{ctitles2}</div>
                         <div className="carousselAction">
